@@ -18,7 +18,7 @@ public class ItemService {
 
     public Optional<Item> getItem(String itemId) {
         try {
-            log.info("Getting item: {}", itemId);
+            log.info("Getting item {}", itemId);
             return Optional.ofNullable(workerClient.getItem(itemId));
         } catch (FeignException e) {
             log.error("Error getting item {}", itemId, e);
