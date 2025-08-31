@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(
         name = "worker-service",
-        url = "${worker-service.url:http://localhost:8081}"
+        url = "${worker-service.url:http://worker-service:8080}"
 )
 public interface WorkerClient {
 
