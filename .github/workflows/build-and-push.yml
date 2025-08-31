@@ -37,7 +37,7 @@ jobs:
         with:
           repository: vivaDmytro/k8s-infra
           path: k8s-infra
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.INFRA_REPO_TOKEN }}
           ref: main
 
       - name: Update Helm chart image tag
