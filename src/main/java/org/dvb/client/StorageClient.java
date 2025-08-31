@@ -1,0 +1,21 @@
+package org.dvb.client;
+
+import org.dvb.model.Item;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+@FeignClient(
+        name = "storage-service",
+        url = "${storage-service.url:http://storage-service:8080}"
+)
+public interface StorageClient {
+
+    @GetMapping("/items/{id}")
+    Item getItem(@PathVariable("id") String id);
+
+    @PostMapping("/items")
+    Item createItem(@RequestBody Item item);
+}
