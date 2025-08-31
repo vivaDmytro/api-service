@@ -35,7 +35,7 @@ jobs:
       - name: Checkout k8s-infra repo
         uses: actions/checkout@v3
         with:
-          repository: dmytrobudnik/k8s-infra
+          repository: vivaDmytro/k8s-infra
           path: k8s-infra
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: main
