@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(
         name = "storage-service",
-        url = "${storage-service.url:http://storage-service:8080}"
+        url = "${storage-service.url:http://localhost:8081}"
 )
 public interface StorageClient {
 
